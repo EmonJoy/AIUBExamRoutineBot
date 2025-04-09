@@ -11,7 +11,7 @@ import java.io.IOException;
 public class MyBot extends TelegramLongPollingBot {
 
     private static final String BOT_USERNAME = "@coder22bot";  // ur bot username
-    private static final String BOT_TOKEN = "6817651266:AAHDzZjfl3JyMhubKWcg-_hmTvqiCPw1JSY";       // Bot token
+    private static final String BOT_TOKEN = "6817651266:AAHDzZjfl3*********g-_XXXXXXX";       // Bot token,,I wwill hide it for my bot's security
 
     @Override
     public void onUpdateReceived(Update update) {

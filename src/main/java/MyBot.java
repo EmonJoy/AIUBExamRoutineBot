@@ -10,16 +10,14 @@ import java.io.IOException;
 
 public class MyBot extends TelegramLongPollingBot {
 
-    // Define the bot's username and token
-    private static final String BOT_USERNAME = "@coder22bot";  // Replace with your bot username
-    private static final String BOT_TOKEN = "6817651266:AAHDzZjfl3JyMhubKWcg-_hmTvqiCPw1JSY";        // Replace with your bot token
+    private static final String BOT_USERNAME = "@coder22bot";  // ur bot username
+    private static final String BOT_TOKEN = "6817651266:AAHDzZjfl3JyMhubKWcg-_hmTvqiCPw1JSY";       // Bot token
 
     @Override
     public void onUpdateReceived(Update update) {
-        // Get the message from the update
 
 
-        // Check if the message has text
+
         if (update.hasMessage() && update.getMessage().hasText()) {
             String text = update.getMessage().getText().trim();
             long chatId = update.getMessage().getChatId();
@@ -46,22 +44,21 @@ public class MyBot extends TelegramLongPollingBot {
 
     @Override
     public String getBotUsername() {
-        return BOT_USERNAME;  // Return the bot's username
+        return BOT_USERNAME;
     }
 
     @Override
     public String getBotToken() {
-        return BOT_TOKEN;  // Return the bot's token
+        return BOT_TOKEN;
     }
 
     public static void main(String[] args) {
-        // Initialize the Telegram Bots API
         try {
             TelegramBotsApi botsApi = new TelegramBotsApi(DefaultBotSession.class);
 
-            // Register the bot with the Telegram API
+
             botsApi.registerBot(new MyBot());
-            System.out.println("Bot is running...");
+            System.out.println("Bot is running...🫡");
 
         } catch (TelegramApiException e) {
             e.printStackTrace();

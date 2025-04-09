@@ -9,24 +9,27 @@ public class Main {
     public static String Search(String srch) {
 
         try {
-            // ✅ PDF file path
+        
             File file = new File("D:\\Java pppp\\MyRoutine\\src\\main\\java\\pdf.pdf");
             var document = PDDocument.load(file);
 
-            // ✅ Read all text from PDF
+
+            
             PDFTextStripper stripper = new PDFTextStripper();
             String text = stripper.getText(document);
 
             document.close();
 
-            // ✅ Break text into lines
+
+
+            
             String[] lines = text.split("\n");
 
             String currentDate = "";
             String currentSlot = "";
             String currentTime = "";
 
-            for (String line : lines) {
+            for (String line: lines) {
                 line = line.trim();
 
                 //  findnig exm date
@@ -47,7 +50,7 @@ public class Main {
                     currentTime = line.trim();
                 }
 
-                // Subject search korbo ......
+                // Subject search jnno ......
                 if (line.toUpperCase().contains(srch.toUpperCase())) {
                     return "📘 Subject: " + line + "\n\n" +
                             "🗓️ Date   : " + currentDate + "\n" +
